@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-main: #f7f8fc;
+  --bg-soft: #eef2ff;
+  --ink-900: #0f172a;
+  --ink-700: #334155;
+  --brand-600: #0f766e;
+  --brand-500: #0d9488;
+  --brand-100: #ccfbf1;
+  --accent-500: #ea580c;
+  --surface-white: rgba(255, 255, 255, 0.88);
+}
+
+@layer base {
+  body {
+    @apply text-slate-900 antialiased;
+    font-family: 'Manrope', sans-serif;
+    background:
+      radial-gradient(48rem 34rem at 0% 0%, rgba(45, 212, 191, 0.13), transparent 55%),
+      radial-gradient(44rem 36rem at 100% 0%, rgba(251, 146, 60, 0.12), transparent 52%),
+      linear-gradient(180deg, #f9fbff 0%, var(--bg-main) 55%, #eef2ff 100%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Sora', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-teal-600 text-white px-4 py-2.5 rounded-xl hover:bg-teal-500 transition-colors duration-200 font-semibold disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-slate-700 px-4 py-2.5 rounded-xl border border-slate-300 hover:bg-slate-50 transition-colors duration-200 font-semibold;
+  }
+  
+  .btn-danger {
+    @apply bg-rose-600 text-white px-4 py-2.5 rounded-xl hover:bg-rose-500 transition-colors duration-200 font-semibold;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2.5 border border-slate-300 rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-teal-300 focus:border-transparent;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl border border-slate-200/80 shadow-sm p-6;
+  }
+}
+
+.app-shell-bg {
+  background:
+    radial-gradient(46rem 32rem at 0% 0%, rgba(45, 212, 191, 0.12), transparent 56%),
+    radial-gradient(40rem 34rem at 100% 0%, rgba(251, 146, 60, 0.13), transparent 54%),
+    linear-gradient(180deg, #f9fbff 0%, #f3f6ff 45%, #eef2ff 100%);
+}
+
+.glass-card {
+  background: var(--surface-white);
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.09);
+}
+
+.glass-card-dark {
+  background: rgba(248, 250, 252, 0.94);
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.12);
+}
+
+.nav-rail {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(248, 250, 252, 0.94) 50%, rgba(241, 245, 249, 0.94) 100%);
+  border-right: 1px solid rgba(148, 163, 184, 0.28);
+  backdrop-filter: blur(12px);
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-float {
+  animation: float 6.4s ease-in-out infinite;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}

@@ -1,0 +1,35 @@
+# Dependencies
+**/node_modules/
+
+# Environment and credentials
+.env
+.env.*
+!.env.example
+
+# Runtime logs and generated data
+*.log
+**/logs/
+**/uploads/
+**/coverage/
+**/pids/
+*.pid
+*.pid.lock
+*.seed
+*.db
+
+# Frontend build output
+frontend/build/
+frontend/dist/
+
+# Local tooling and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Package-manager caches and generated archives
+.npm/
+*.tgz
+.yarn-integrity

@@ -1,0 +1,100 @@
+metadata:
+  generated: "2026-11-03"
+  source_spec: "profile-account-implementation-plan.md"
+  target_plan: "profile-account-implementation-plan.md"
+summary:
+  total_requirements: 21
+  covered_requirements: 21
+  missing_requirements: 0
+  coverage_percentage: 100.0
+requirements:
+  - req_id: "REQ-001"
+    req_description: "Own profile editing"
+    priority: "P1"
+    plan_mapping: { phase: "Phase-2", phase_name: "Profile and security", items: [{ item_id: "2.2", description: "Harden personal profile APIs" }] }
+  - req_id: "REQ-002"
+    req_description: "Read-only employment information"
+    priority: "P1"
+    plan_mapping: { phase: "Phase-2", phase_name: "Profile and security", items: [{ item_id: "2.1", description: "Refactor Settings into sections" }] }
+  - req_id: "REQ-003"
+    req_description: "Contact and regional profile fields"
+    priority: "P1"
+    plan_mapping: { phase: "Phase-1/3", phase_name: "Foundations and preferences", items: [{ item_id: "1.2", description: "Add preference persistence models" }, { item_id: "3.2", description: "Persist regional preferences" }] }
+  - req_id: "REQ-004"
+    req_description: "Validation and safe audit events"
+    priority: "P1"
+    plan_mapping: { phase: "Phase-1/4", phase_name: "Foundations and validation", items: [{ item_id: "1.3", description: "Add security service boundaries" }, { item_id: "4.3", description: "Add authorization tests" }] }
+  - req_id: "REQ-005"
+    req_description: "Secure password change"
+    priority: "P1"
+    plan_mapping: { phase: "Phase-2", phase_name: "Security", items: [{ item_id: "2.4", description: "Implement MFA-ready account security" }] }
+  - req_id: "REQ-006"
+    req_description: "Consistent password policy"
+    priority: "P1"
+    plan_mapping: { phase: "Phase-1", phase_name: "Foundations", items: [{ item_id: "1.1", description: "Define settings contract" }] }
+  - req_id: "REQ-007"
+    req_description: "Prior-session invalidation"
+    priority: "P1"
+    plan_mapping: { phase: "Phase-2", phase_name: "Security", items: [{ item_id: "2.3", description: "Implement sessions" }] }
+  - req_id: "REQ-008"
+    req_description: "MFA lifecycle"
+    priority: "P1"
+    plan_mapping: { phase: "Phase-2", phase_name: "Security", items: [{ item_id: "2.4", description: "Implement MFA" }] }
+  - req_id: "REQ-009"
+    req_description: "Session/device control"
+    priority: "P1"
+    plan_mapping: { phase: "Phase-2", phase_name: "Security", items: [{ item_id: "2.3", description: "Implement sessions" }] }
+  - req_id: "REQ-010"
+    req_description: "Security notifications/audit"
+    priority: "P1"
+    plan_mapping: { phase: "Phase-2", phase_name: "Security", items: [{ item_id: "2.3", description: "Implement sessions" }, { item_id: "2.4", description: "Implement MFA" }] }
+  - req_id: "REQ-011"
+    req_description: "Cross-device preferences"
+    priority: "P1"
+    plan_mapping: { phase: "Phase-3", phase_name: "Preferences", items: [{ item_id: "3.1", description: "Persist notification preferences" }] }
+  - req_id: "REQ-012"
+    req_description: "Channel/category preferences"
+    priority: "P2"
+    plan_mapping: { phase: "Phase-3", phase_name: "Preferences", items: [{ item_id: "3.1", description: "Persist notification preferences" }] }
+  - req_id: "REQ-013"
+    req_description: "Mandatory security alerts"
+    priority: "P1"
+    plan_mapping: { phase: "Phase-3", phase_name: "Preferences", items: [{ item_id: "3.1", description: "Persist notification preferences" }] }
+  - req_id: "REQ-014"
+    req_description: "Accessibility/regional settings"
+    priority: "P2"
+    plan_mapping: { phase: "Phase-3", phase_name: "Preferences", items: [{ item_id: "3.2", description: "Persist appearance preferences" }] }
+  - req_id: "REQ-015"
+    req_description: "Personal data export"
+    priority: "P2"
+    plan_mapping: { phase: "Phase-3", phase_name: "Privacy", items: [{ item_id: "3.3", description: "Add privacy workflows" }] }
+  - req_id: "REQ-016"
+    req_description: "Retention-aware deletion request"
+    priority: "P2"
+    plan_mapping: { phase: "Phase-3", phase_name: "Privacy", items: [{ item_id: "3.3", description: "Add privacy workflows" }] }
+  - req_id: "REQ-017"
+    req_description: "Privacy request status"
+    priority: "P2"
+    plan_mapping: { phase: "Phase-3", phase_name: "Privacy", items: [{ item_id: "3.3", description: "Add privacy workflows" }] }
+  - req_id: "REQ-018"
+    req_description: "Isolated organization settings"
+    priority: "P1"
+    plan_mapping: { phase: "Phase-4", phase_name: "Governance", items: [{ item_id: "4.1", description: "Separate organization settings" }] }
+  - req_id: "REQ-019"
+    req_description: "HR/admin employment control"
+    priority: "P1"
+    plan_mapping: { phase: "Phase-2", phase_name: "Profile", items: [{ item_id: "2.2", description: "Harden profile APIs" }] }
+  - req_id: "REQ-020"
+    req_description: "Server-side authorization"
+    priority: "P1"
+    plan_mapping: { phase: "Phase-4", phase_name: "Governance", items: [{ item_id: "4.1", description: "Separate organization settings" }] }
+  - req_id: "REQ-021"
+    req_description: "Authorization-boundary tests"
+    priority: "P1"
+    plan_mapping: { phase: "Phase-4", phase_name: "Validation", items: [{ item_id: "4.3", description: "Add authorization tests" }] }
+missing_requirements: []
+orphan_plan_items: []
+validation:
+  passed: true
+  errors: []
+  warnings: []
